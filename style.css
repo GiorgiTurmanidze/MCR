@@ -91,8 +91,11 @@ html {
 .header #checkLabel {
   display: none;
   justify-content: center;
+  position: fixed;
+  right: 0;
   align-items: center;
   width: 50px;
+  z-index: 3;
   height: 50px;
 }
 .header #checkLabel .burger {
@@ -357,7 +360,7 @@ html {
 .main .belowVideo .secondS .titleBar .titleBarGrid .leftBar {
   width: 500px;
   gap: 10px;
-  min-width: 400px;
+  min-width: 300px;
 }
 .main .belowVideo .secondS .titleBar .titleBarGrid .leftBar h3 {
   font-size: 26px;
@@ -1066,7 +1069,7 @@ html {
   background-color: #F7F7F7;
   height: 60vh;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: start;
@@ -1433,8 +1436,35 @@ html {
     width: 300px !important;
     height: 400px !important;
   }
-  .titleOfS {
-    width: 300px !important;
+  .main .belowVideo .fifthS .titleBar .titleBarGrid .leftBar h1 {
+    font-size: 24px;
+  }
+  .main .belowVideo .fifthS .titleBar .titleBarGrid .leftBar .text {
+    min-width: 200px;
+  }
+  .main .belowVideo .secondS .titleBar .titleBarGrid .leftBar h1 {
+    font-size: 18px;
+  }
+  .main .videoSection .textOverVideo .buttonsOnVideo {
+    flex-direction: column;
+  }
+  .main .belowVideo .thirdS .Commercial .flexBox .titleOfCommercial .text {
+    min-width: 200px;
+  }
+  .main .belowVideo .thirdS .Infrastructure .flexBox2 .titleOfInfra .text {
+    min-width: 200px;
+  }
+  .main .belowVideo .carousel .carouselFlex .carouselTopic .text {
+    min-width: 200px;
+  }
+  .main .belowVideo .thirdS .Residential .flexBox3 .rightResidential .text {
+    min-width: 200px;
+  }
+  .main .belowVideo .fourthS .SignatureBox .SignatureFlex .text {
+    min-width: 200px;
+  }
+  .main .belowVideo .thirdS .Residential .flexBox3 .rightResidential img {
+    min-width: 250px;
   }
   .flexBox {
     align-items: start;
