@@ -30,6 +30,9 @@ html {
   right: 98px;
   z-index: 3;
 }
+.header #check:checked ~ #checkLabel {
+  position: fixed;
+}
 .header #check:checked ~ #checkLabel .burger .top_line {
   transform: rotate(45deg);
   top: 20px;
@@ -90,8 +93,8 @@ html {
 }
 .header #checkLabel {
   display: none;
+  position: relative;
   justify-content: center;
-  position: fixed;
   right: 0;
   align-items: center;
   width: 50px;

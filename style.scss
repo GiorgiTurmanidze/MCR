@@ -66,6 +66,10 @@ $grayBackground: rgba(0, 0, 0, 0.468);
         right: 98px;
         z-index: 3;
     }
+    #check:checked ~ #checkLabel {
+        position: fixed;
+    }
+
     #check:checked ~ #checkLabel .burger {
         .top_line {
             transform: rotate(45deg);
@@ -131,8 +135,8 @@ $grayBackground: rgba(0, 0, 0, 0.468);
     }
     #checkLabel {
         display: none;
+        position: relative;
         justify-content: center;
-        position: fixed;
         right: 0;
         align-items: center;
         width: 50px;
