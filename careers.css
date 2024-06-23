@@ -35,6 +35,9 @@ body {
   right: 98px;
   z-index: 3;
 }
+.header #check:checked ~ #checkLabel {
+  position: fixed;
+}
 .header #check:checked ~ #checkLabel .burger .top_line {
   transform: rotate(45deg);
   top: 20px;

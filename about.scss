@@ -267,6 +267,9 @@ main {
         right: 98px;
         z-index: 3;
     }
+    #check:checked ~ #checkLabel {
+        position: fixed;
+    }
     #check:checked ~ #checkLabel .burger {
         .top_line {
             transform: rotate(45deg);
