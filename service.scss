@@ -673,6 +673,7 @@ main {
                     .offersBoxFlex {
                         align-items: center;
                         flex-direction: column-reverse;
+                        min-width: 300px;
                         .offerPicture {
                             img {
                                 width: 100%;
@@ -691,6 +692,7 @@ main {
                     .offersBoxFlex {
                         align-items: center;
                         flex-direction: column;
+                        min-width: 300px;
                         .offerPicture {
                             img {
                                 width: 100%;
@@ -724,4 +726,52 @@ main {
         }
         
     }
+}
+
+@media screen and (min-width: 300px) and (max-width: 450px) {
+    main {
+        .offers {
+            .offersGridBox {
+                .offerBox:nth-child(even) {
+                    align-items: center;
+                    .offersBoxFlex {
+                        align-items: center;
+                        flex-direction: column-reverse;
+                        min-width: 200px;
+                        .rightOffer {
+                            .text {
+                                span {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+    main {
+        .offers {
+            .offersGridBox {
+                .offerBox:nth-child(odd) {
+                    align-items: center;
+                    .offersBoxFlex {
+                        align-items: center;
+                        flex-direction: column;
+                        min-width: 200px;
+                        .leftOffer {
+                            .text {
+                                span {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+    
 }
