@@ -624,4 +624,15 @@ main .ending .endingBox .rightEnd img {
   .header .hiddenNavBar {
     display: none !important;
   }
+}
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  main .textOfWork .FlexBoxOfWork .leftCol {
+    min-width: 280px;
+  }
+  main .ending .endingBox .leftEnd h1 {
+    font-size: 30px;
+  }
+  main .textOfWork .FlexBoxOfWork .rightCol .rightBox .text {
+    min-width: 280px;
+  }
 }/*# sourceMappingURL=about.css.map */

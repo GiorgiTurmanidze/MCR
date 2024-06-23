@@ -583,6 +583,7 @@ main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer .text span {
   main .offers .offersGridBox .offerBox:nth-child(even) .offersBoxFlex {
     align-items: center;
     flex-direction: column-reverse;
+    min-width: 300px;
   }
   main .offers .offersGridBox .offerBox:nth-child(even) .offersBoxFlex .offerPicture img {
     width: 100%;
@@ -593,6 +594,7 @@ main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer .text span {
   main .offers .offersGridBox .offerBox:nth-child(odd) .offersBoxFlex {
     align-items: center;
     flex-direction: column;
+    min-width: 300px;
   }
   main .offers .offersGridBox .offerBox:nth-child(odd) .offersBoxFlex .offerPicture img {
     width: 100%;
@@ -612,5 +614,29 @@ main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer .text span {
 @media screen and (min-width: 900px) {
   .header .hiddenNavBar {
     display: none !important;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 450px) {
+  main .offers .offersGridBox .offerBox:nth-child(even) {
+    align-items: center;
+  }
+  main .offers .offersGridBox .offerBox:nth-child(even) .offersBoxFlex {
+    align-items: center;
+    flex-direction: column-reverse;
+    min-width: 200px;
+  }
+  main .offers .offersGridBox .offerBox:nth-child(even) .offersBoxFlex .rightOffer .text span {
+    font-size: 13px;
+  }
+  main .offers .offersGridBox .offerBox:nth-child(odd) {
+    align-items: center;
+  }
+  main .offers .offersGridBox .offerBox:nth-child(odd) .offersBoxFlex {
+    align-items: center;
+    flex-direction: column;
+    min-width: 200px;
+  }
+  main .offers .offersGridBox .offerBox:nth-child(odd) .offersBoxFlex .leftOffer .text span {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=service.css.map */
