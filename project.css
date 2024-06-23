@@ -37,6 +37,7 @@ body {
 }
 .header #check:checked ~ #checkLabel {
   position: fixed;
+  z-index: 3;
 }
 .header #check:checked ~ #checkLabel .burger .top_line {
   transform: rotate(45deg);
@@ -549,6 +550,15 @@ main .Projects .projectsFlex .projectBox .pBox h3 {
   }
 }
 @media screen and (min-width: 300px) and (max-width: 400px) {
+  main .Projects .projectsFlex .projectBox {
+    flex-direction: column;
+    height: 1000px;
+    align-items: center;
+    gap: 20px;
+  }
+  main .Projects .projectsFlex .projectBox .pBox {
+    width: 300px;
+  }
   main .ourServices .titleBar .titleBarGrid .leftBar h1 {
     font-size: 30px;
     width: 300px;

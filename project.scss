@@ -73,6 +73,7 @@ $grayBackground: rgba(0, 0, 0, 0.468);
     }
     #check:checked ~ #checkLabel {
         position: fixed;
+        z-index: 3;
     }
     #check:checked ~ #checkLabel .burger {
         .top_line {
@@ -636,6 +637,21 @@ main {
 }
 
 @media screen and (min-width: 300px) and (max-width: 400px) {
+    main {
+        .Projects {
+            .projectsFlex {
+                .projectBox {
+                    flex-direction: column;
+                    height: 1000px;
+                    align-items: center;
+                    gap: 20px;
+                    .pBox {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
     main {
         .ourServices {
             .titleBar {

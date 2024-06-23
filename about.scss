@@ -269,6 +269,7 @@ main {
     }
     #check:checked ~ #checkLabel {
         position: fixed;
+        z-index: 3;
     }
     #check:checked ~ #checkLabel .burger {
         .top_line {
