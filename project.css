@@ -547,4 +547,13 @@ main .Projects .projectsFlex .projectBox .pBox h3 {
   .header .hiddenNavBar {
     display: none !important;
   }
+}
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  main .ourServices .titleBar .titleBarGrid .leftBar h1 {
+    font-size: 30px;
+    width: 300px;
+  }
+  main .ourServices .titleBar .titleBarGrid .leftBar .text {
+    width: 300px;
+  }
 }/*# sourceMappingURL=project.css.map */

@@ -634,3 +634,23 @@ main {
         
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    main {
+        .ourServices {
+            .titleBar {
+                .titleBarGrid {
+                    .leftBar {
+                        h1 {
+                            font-size: 30px;
+                            width: 300px;
+                        }
+                        .text {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
