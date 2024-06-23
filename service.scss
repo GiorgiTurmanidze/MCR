@@ -410,7 +410,6 @@ main {
                     .rightOffer {
                         display: flex;
                         align-items: start;
-                        width: 410px;
                         flex-direction: column;
                         justify-content: center;
                         .nameOfOfferBox {
@@ -665,6 +664,7 @@ main {
 }
 
 @media screen and (max-width: 900px) {
+
     main {
         .offers {
             .offersGridBox {
@@ -693,6 +693,9 @@ main {
                         align-items: center;
                         flex-direction: column;
                         min-width: 300px;
+                        .rightOffer {
+                            width: 410px;
+                        }
                         .offerPicture {
                             img {
                                 width: 100%;
@@ -728,7 +731,62 @@ main {
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 450px) {
+@media screen and (min-width: 300px) and (max-width: 420px) {
+
+    main {
+        .ourServices {
+            .titleBar {
+                .titleBarGrid {
+                    .leftBar {
+                        .text {
+                            width: 250px;
+                        }
+                        h1 {
+                            font-size: 24px;
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .offers {
+            .offersGridBox {
+                .offerBox {
+                    .offersBoxFlex {
+                        .leftOffer {
+                            padding-left: 5px;
+                            .text {
+                                width: 100%;
+                                min-width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .offers {
+            .offersGridBox {
+                .offerBox {
+                    .offersBoxFlex {
+                        .rightOffer {
+                            padding-left: 30px;
+                            .text {
+                                width: 100%;
+                                min-width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     main {
         .offers {
             .offersGridBox {

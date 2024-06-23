@@ -364,7 +364,6 @@ main .offers .offersGridBox .offerBox .offersBoxFlex .leftOffer .text span {
 main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer {
   display: flex;
   align-items: start;
-  width: 410px;
   flex-direction: column;
   justify-content: center;
 }
@@ -596,6 +595,9 @@ main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer .text span {
     flex-direction: column;
     min-width: 300px;
   }
+  main .offers .offersGridBox .offerBox:nth-child(odd) .offersBoxFlex .rightOffer {
+    width: 410px;
+  }
   main .offers .offersGridBox .offerBox:nth-child(odd) .offersBoxFlex .offerPicture img {
     width: 100%;
   }
@@ -616,7 +618,28 @@ main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer .text span {
     display: none !important;
   }
 }
-@media screen and (min-width: 300px) and (max-width: 450px) {
+@media screen and (min-width: 300px) and (max-width: 420px) {
+  main .ourServices .titleBar .titleBarGrid .leftBar .text {
+    width: 250px;
+  }
+  main .ourServices .titleBar .titleBarGrid .leftBar h1 {
+    font-size: 24px;
+    width: 300px;
+  }
+  main .offers .offersGridBox .offerBox .offersBoxFlex .leftOffer {
+    padding-left: 5px;
+  }
+  main .offers .offersGridBox .offerBox .offersBoxFlex .leftOffer .text {
+    width: 100%;
+    min-width: 200px;
+  }
+  main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer {
+    padding-left: 30px;
+  }
+  main .offers .offersGridBox .offerBox .offersBoxFlex .rightOffer .text {
+    width: 100%;
+    min-width: 200px;
+  }
   main .offers .offersGridBox .offerBox:nth-child(even) {
     align-items: center;
   }
