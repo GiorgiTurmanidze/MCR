@@ -336,20 +336,147 @@ main {
                             transform: scale(1.05);
                         }
                     }
-                    .text {
+                    span {
+                        font-family: "Poppins", sans-serif;
+                        font-size: 14px;
+                        color: rgb(47, 47, 47);
+                        letter-spacing: 1px;
                         position: relative;
-                        width: 400px;
-                        top: 10px;
-                        span {
-                            font-family: "Poppins", sans-serif;
-                            font-size: 14px;
-                            color: rgb(47, 47, 47);
-                            letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ContactBox {
+        width: 100%;
+        background-color: $background;
+        padding: 0 8%;
+        .contactFlex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            align-items: start;
+            .leftInputs {
+                width: 45%;
+                min-width: 500px;
+                form {
+                    .GridBox {
+                        display: grid;
+                        grid-template-rows: 1fr 1fr 2fr 1fr;
+                        grid-template-columns: 45%;
+                        width: 100%;
+                        .Name {
+                            grid-area: 1 / 1 / 2 / 2;
+                        }
+
+                        .LastName {
+                            grid-area: 1 / 2 / 2 / 2;
+                        }
+                        .Email {
+                            grid-area: 2 / 1 / 3 / 2;
+                            input {
+                                border-bottom: 2px solid $orangeBackground !important;
+                            }
+                        }
+
+                        .Subject {
+                            grid-area: 2 / 2 / 3 / 2;
+                        }
+
+                        .Message {
+                            label {
+                                margin-bottom: 20px;
+                                width: 100%;
+                            }
+                            width: 490px !important;
+                            grid-area: 3 / 1 / 4 / 2;
+                            textarea {
+                                min-width: 100%;
+                                max-width: 100%;
+                                display: block;
+                                min-height: 25vh;
+                                border: 1px solid black;
+                                border-radius: 0px;
+                                outline: none;
+                                padding: 10px 20px 10px 10px;
+                            }
+                        }
+
+                        .ButtonSub {
+                            grid-area: 4 / 1 / 5 / 2;
                             position: relative;
-                            
+                            top: 20px;
+                            #Submit {
+                                width: 214px;
+                                height: 60px;
+                                padding: 0;
+                                cursor: pointer;
+                                background-color: $orangeBackground;
+                                color: black;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 16px;
+                                transition: all .3s ease;
+                                border: 1px solid $orangeBackground;
+                                font-family: "Poppins", sans-serif;
+                                &:hover {
+                                    background-color: $background;
+                                    border: 1px solid black;
+                                }
+                            }
+                        }
+                        .info {
+                            justify-self: start;
+                            align-self: flex-start;
+                            width: 210px;
+                            position: relative;
+                            margin: 16px 0px 43px 0;
+                            height: 56px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0;
+                            align-items: start;
+                            &:hover > textarea {
+                                border: 2px solid black;
+                            }
+                            &:hover > input {
+                                border-bottom: 2px solid black;
+                            }
+                            input {
+                                padding-bottom: 10px;
+                                padding-top: 3px;
+                                outline: none;
+                                border: none;
+                                width: 214px;
+                                height: 40px;
+                                font-size: 14px;
+                                font-family: "Poppins", sans-serif;
+                                font-weight: 300;
+                                background-color: $background;
+                                border-bottom: 1px solid black;
+                                padding-left: 5px;
+                                &:focus {
+                                    border-bottom: 2px solid black;
+                                }
+                            }
+
+                            label {
+                                font-family: "Poppins", sans-serif;
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
                         }
                     }
-                
+                }
+            }
+
+            .theImage {
+                img {
+                    width: 100%;
                 }
             }
         }
@@ -527,6 +654,18 @@ main {
     }
 }
 
+
+@media screen and (max-width: 1250px) {
+    main {
+        .ContactBox {
+            .contactFlex {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1150px) {
     #rightTop {
         width: 20%;
@@ -554,11 +693,66 @@ main {
     }
 }
 
+@media screen and  (max-width: 600px) {
+    main {
+        .ContactBox {
+            .contactFlex {
+                .leftInputs {
+                    form {
+                        .GridBox {
+                            justify-content: start;
+                            padding-left: 120px;
+                            grid-template-rows: repeat(7, 1fr);
+                            .LastName {
+                                grid-area: 2 / 1 / 2 / 2;
+                            }
+                            .Email {
+                                grid-area: 3 / 1 / 4 / 2;
+                            }
+                            .Subject {
+                                grid-area: 4 / 1 / 5 / 2;
+                            }
+                            .Message {
+                                grid-area: 5 / 1 / 6 / 2;
+                                width: 300px !important;
+                            }
+                            .ButtonSub {
+                                grid-area: 7 / 1 / 8 / 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 900px) {
     .header {
         .hiddenNavBar {
             display: none !important;
         }
         
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 400px) {
+    main {
+        .ourServices {
+            .titleBar {
+                .titleBarGrid {
+                    .leftBar {
+                        h1 {
+                            font-size: 30px;
+                            width: 250px;
+                        }
+                        span {
+                            display: block;
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

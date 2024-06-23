@@ -294,17 +294,135 @@ main .ourServices .titleBar .titleBarGrid .leftBar h1 {
 main .ourServices .titleBar .titleBarGrid .leftBar h1:hover {
   transform: scale(1.05);
 }
-main .ourServices .titleBar .titleBarGrid .leftBar .text {
-  position: relative;
-  width: 400px;
-  top: 10px;
-}
-main .ourServices .titleBar .titleBarGrid .leftBar .text span {
+main .ourServices .titleBar .titleBarGrid .leftBar span {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   color: rgb(47, 47, 47);
   letter-spacing: 1px;
   position: relative;
+}
+main .ContactBox {
+  width: 100%;
+  background-color: #F7F7F7;
+  padding: 0 8%;
+}
+main .ContactBox .contactFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: start;
+}
+main .ContactBox .contactFlex .leftInputs {
+  width: 45%;
+  min-width: 500px;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-columns: 45%;
+  width: 100%;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Name {
+  grid-area: 1/1/2/2;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .LastName {
+  grid-area: 1/2/2/2;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Email {
+  grid-area: 2/1/3/2;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Email input {
+  border-bottom: 2px solid #FD5521 !important;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Subject {
+  grid-area: 2/2/3/2;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Message {
+  width: 490px !important;
+  grid-area: 3/1/4/2;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Message label {
+  margin-bottom: 20px;
+  width: 100%;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .Message textarea {
+  min-width: 100%;
+  max-width: 100%;
+  display: block;
+  min-height: 25vh;
+  border: 1px solid black;
+  border-radius: 0px;
+  outline: none;
+  padding: 10px 20px 10px 10px;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .ButtonSub {
+  grid-area: 4/1/5/2;
+  position: relative;
+  top: 20px;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .ButtonSub #Submit {
+  width: 214px;
+  height: 60px;
+  padding: 0;
+  cursor: pointer;
+  background-color: #FD5521;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid #FD5521;
+  font-family: "Poppins", sans-serif;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .ButtonSub #Submit:hover {
+  background-color: #F7F7F7;
+  border: 1px solid black;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .info {
+  justify-self: start;
+  align-self: flex-start;
+  width: 210px;
+  position: relative;
+  margin: 16px 0px 43px 0;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: start;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .info:hover > textarea {
+  border: 2px solid black;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .info:hover > input {
+  border-bottom: 2px solid black;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .info input {
+  padding-bottom: 10px;
+  padding-top: 3px;
+  outline: none;
+  border: none;
+  width: 214px;
+  height: 40px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .info input:focus {
+  border-bottom: 2px solid black;
+}
+main .ContactBox .contactFlex .leftInputs form .GridBox .info label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+main .ContactBox .contactFlex .theImage img {
+  width: 100%;
 }
 
 .footer {
@@ -469,6 +587,12 @@ main .ourServices .titleBar .titleBarGrid .leftBar .text span {
   border-color: black;
 }
 
+@media screen and (max-width: 1250px) {
+  main .ContactBox .contactFlex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 1150px) {
   #rightTop {
     width: 20%;
@@ -492,8 +616,41 @@ main .ourServices .titleBar .titleBarGrid .leftBar .text span {
     display: none;
   }
 }
+@media screen and (max-width: 600px) {
+  main .ContactBox .contactFlex .leftInputs form .GridBox {
+    justify-content: start;
+    padding-left: 120px;
+    grid-template-rows: repeat(7, 1fr);
+  }
+  main .ContactBox .contactFlex .leftInputs form .GridBox .LastName {
+    grid-area: 2/1/2/2;
+  }
+  main .ContactBox .contactFlex .leftInputs form .GridBox .Email {
+    grid-area: 3/1/4/2;
+  }
+  main .ContactBox .contactFlex .leftInputs form .GridBox .Subject {
+    grid-area: 4/1/5/2;
+  }
+  main .ContactBox .contactFlex .leftInputs form .GridBox .Message {
+    grid-area: 5/1/6/2;
+    width: 300px !important;
+  }
+  main .ContactBox .contactFlex .leftInputs form .GridBox .ButtonSub {
+    grid-area: 7/1/8/2;
+  }
+}
 @media screen and (min-width: 900px) {
   .header .hiddenNavBar {
     display: none !important;
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 400px) {
+  main .ourServices .titleBar .titleBarGrid .leftBar h1 {
+    font-size: 30px;
+    width: 250px;
+  }
+  main .ourServices .titleBar .titleBarGrid .leftBar span {
+    display: block;
+    width: 200px;
   }
 }/*# sourceMappingURL=contact.css.map */
